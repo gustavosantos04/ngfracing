@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGF Racing</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Modal de Detalhes com Swiper -->
+<div id="carModal" class="modal-carro">
+  <div class="modal-content-carro">
+    <span class="close-carro" onclick="fecharModalCarro()">&times;</span>
+    <div class="modal-body">
+      <div class="modal-img">
+        <div class="swiper-container main-swiper">
+          <div class="swiper-wrapper" id="swiperWrapper">
+            <!-- Imagens dinâmicas aqui -->
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="modal-info">
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescricao"></p>
+        <a id="modalWhatsapp" href="#" target="_blank">Falar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <img src="img/www.ngfracing.com.br-logo.jpg" alt="NGF Racing" class="logo" />
+      <nav class="">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#estoque">Estoque</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content"></div>
+      <h1>Bem-vindo à <span>NGF Racing</span></h1>
+      <p>Vendendo Qualidade e Procedência desde 2013</p>
+      <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="btn-whatsapp">Fale conosco no WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="estoque" class="estoque">
+        <h2 class="titulo-secao">Nosso Estoque</h2>
+    
+        <div class="filtros">
+            <button onclick="filtrarCarros('todos')">Todos</button>
+            <button onclick="filtrarCarros('popular')">Populares</button>
+            <button onclick="filtrarCarros('racing')">Racing</button>
+        </div>
+    
+        <div class="carros-grid">
+            <!-- Popular 1 -->
+            <div class="car-card popular">
+                <img src="img/download.jpg" alt="Gol G6 1.6 Flex">
+                <div class="car-info">
+                    <h3>Gol G6 1.6 Flex</h3>
+                    <p>2014 • Completo • 120.000km • Ótimo estado</p>
+                    <a href="javascript:void(0);" onclick="abrirModalCarro(0)">Ver detalhes</a>
+
+                </div>
+            </div>
+
+            <div class="car-card popular">
+                <img src="img/download.jpg" alt="Gol G6 1.6 Flex">
+                <div class="car-info">
+                    <h3>Gol G6 1.6 Flex</h3>
+                    <p>2014 • Completo • 120.000km • Ótimo estado</p>
+                    <a href="javascript:void(0);" onclick="abrirModalCarro(1)">Ver detalhes</a>
+
+                </div>
+            </div>
+    
+            <!-- Racing 1 -->
+            <div class="car-card racing">
+                <img src="img/download (1).jpg" alt="Subaru WRX STI">
+                <div class="car-info">
+                    <h3>Subaru WRX STI</h3>
+                    <p>2017 • AWD Turbo • Preparado • 40.000km</p>
+                    <a href="javascript:void(0);" onclick="abrirModalCarro(2)">Ver detalhes</a>
+                </div>
+            </div>
+
+            <div class="car-card racing">
+                <img src="img/download (1).jpg" alt="Subaru WRX STI">
+                <div class="car-info">
+                    <h3>Golf GTI</h3>
+                    <p>2017 • AWD Turbo • Preparado • 40.000km</p>
+                    <a href="javascript:void(0);" onclick="abrirModalCarro(2)">Ver detalhes</a>
+                </div>
+            </div>
+    
+            <!-- Adicione mais carros com class "popular" ou "racing" -->
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <div class="sobre-bg"></div>
+      <div class="sobre-container">
+        <div class="sobre-texto">
+          <h2>Nossa História nas Pistas</h2>
+          <p>
+            Por mais de 10 anos, aceleramos forte nas pistas de arrancada pelo Brasil.
+            A paixão por performance começou nas pistas, com motores forjados e vitórias marcantes.
+            Hoje, essa mesma dedicação move a NGF Racing, agora como referência na venda de carros e peças de alta
+            performance.
+          </p>
+          <div class="linha-tempo">
+            <div class="etapa">
+              <span>2009</span>
+              <p>Início nas corridas de arrancada</p>
+            </div>
+            <div class="etapa">
+              <span>2019</span>
+              <p>Encerramento da carreira nas pistas</p>
+            </div>
+            <div class="etapa">
+              <span>Hoje</span>
+              <p>Loja especializada em performance e veículos diferenciados</p>
+            </div>
+          </div>
+          <a href="#contato" class="btn-conversao">Venha nos conhecer</a>
+        </div>
+        <div class="sobre-imagem">
+          <img src="img/loja-atual.jpg" alt="Loja atual da NGF Racing">
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials">
+  <div class="container-depoimentos">
+    <h2>O que dizem sobre a NGF Racing</h2>
+
+    <div class="swiper depoimentos-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>"Comprei meu carro com eles e estou muito satisfeito! Atendimento excelente e veículos em ótimo estado."</p>
+            <strong>— João Pereira</strong>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>"Equipe apaixonada por performance. Comprei peças que transformaram meu carro. Recomendo!"</p>
+            <strong>— Amanda Costa</strong>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>"A história do dono e a dedicação em cada detalhe me fizeram confiar na loja. Sou cliente fiel!"</p>
+            <strong>— Ricardo Alves</strong>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <p>"A NGF tem atendimento diferenciado e entende de verdade do mundo racing. Voltei a sonhar com meu projeto!"</p>
+            <strong>— Luana Freitas</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paginação opcional -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="contato" class="contato">
+        <h2>Fale com a NGF Racing</h2>
+        <form action="https://formsubmit.co/gu.nelter@hotmail.com" method="POST">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <input type="tel" name="telefone" placeholder="Seu telefone" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+    
+            <!-- Anti-spam -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Redirecionamento após envio -->
+            <div class="modal" id="modalObrigado">
+            <div class="modal-content">
+                <span class="close-modal" onclick="fecharModal()">&times;</span>
+                <h2>Obrigado pelo contato!</h2>
+                <p>Recebemos sua mensagem. Em breve responderemos.</p>
+            </div>
+            </div>
+
+    
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    
+        <div class="redes">
+            <a href="https://instagram.com/SEUINSTAGRAM" target="_blank">
+                <i class="fab fa-instagram"></i> Nosso Instagram
+            </a>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/55SEUNUMEROAQUI" class="whatsapp-float" target="_blank"><img src="img/whatsapp.png" alt=""></a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
