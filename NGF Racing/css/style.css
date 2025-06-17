@@ -1,9 +1,16 @@
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .modal-body {
     flex-direction: row;
   }
-  .modal-body {
-    flex-direction: row;
+  .sobre-imagem {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -34,8 +41,15 @@
   }
 
   .sobre-container {
-    flex-direction: column;
-    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+    gap: 60px;
   }
 
   .linha-tempo {
@@ -81,7 +95,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ff0044;
 }
-
 
 .modal-img img {
   width: 100%;
@@ -163,7 +176,7 @@
 
 .modal-info h2 {
   margin-bottom: 0.5rem;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .modal-info a {
@@ -186,10 +199,9 @@
   color: #fff;
 }
 
-
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   background-color: #121212;
   color: #f5f5f5;
 }
@@ -214,6 +226,7 @@ header {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
@@ -253,7 +266,8 @@ nav a:focus {
   text-align: center;
   padding: 2rem;
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("img/hero-bg.jpg") center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -307,11 +321,11 @@ nav a:focus {
   transition: background 0.3s, transform 0.3s;
 }
 
-.whatsapp-float:hover{
+.whatsapp-float:hover {
   transform: scale(1.3);
 }
 
-.whatsapp-float img{
+.whatsapp-float img {
   width: 30px;
 }
 
@@ -335,12 +349,16 @@ nav a:focus {
   font-size: 2.5rem;
   margin: 2rem 0 1rem;
   color: white;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .filtros {
   text-align: center;
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .filtros button {
@@ -374,13 +392,13 @@ nav a:focus {
 
 .car-card img {
   width: 100%;
-  height: 220px;/* Ajuste aqui para mudar o tamanho da imagem */
+  height: 220px; /* Ajuste aqui para mudar o tamanho da imagem */
   object-fit: cover;
 }
 
 .car-info {
   padding: 1rem;
-  color: #fff;
+  color: #444;
 }
 
 .car-info h3 {
@@ -550,7 +568,7 @@ form button {
 .sobre-bg {
   position: absolute;
   inset: 0;
-  background: url('img/carro-corrida-antigo.jpg') center/cover no-repeat;
+  background: url("img/carro-corrida-antigo.jpg") center/cover no-repeat;
   filter: brightness(0.3);
   z-index: 1;
 }
@@ -568,7 +586,7 @@ form button {
 }
 
 .sobre-texto {
-  flex: 1 1 500px;
+  flex: 2 1 600px; /* Aumenta prioridade para ganhar mais espaço */
 }
 
 .sobre-texto h2 {
@@ -578,7 +596,7 @@ form button {
 
 .sobre-texto p {
   font-size: 1.2rem;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -601,7 +619,7 @@ form button {
 
 .etapa span {
   font-weight: bold;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   font-size: 1.1rem;
   display: block;
   margin-bottom: 5px;
@@ -610,7 +628,7 @@ form button {
 
 .btn-conversao {
   background-color: #fd2020;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   padding: 12px 24px;
   color: #ffffff;
   border-radius: 8px;
@@ -626,16 +644,20 @@ form button {
 }
 
 .sobre-imagem {
-  flex: 1 1 300px;
+  flex: 1 1 400px; /* Reduz espaço reservado para a imagem */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .sobre-imagem img {
-  max-width: 100%;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  margin-left: 20px;
+  object-fit: cover; /* ou 'contain' dependendo do efeito desejado */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .testimonials {
@@ -671,14 +693,14 @@ form button {
 
 .testimonial-card p {
   font-size: 1rem;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   color: #000000;
   margin-bottom: 15px;
 }
 
 .testimonial-card strong {
   font-weight: bold;
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: "Montserrat", "sans-serif";
   color: #000000;
 }
 
